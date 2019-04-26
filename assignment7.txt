@@ -1,0 +1,30 @@
+class KioskCalc {
+  constructor(fruit,quantity) {
+    this.fruit = fruit;
+    this.quantity = quantity;
+
+   this.fruitsPriceList = {"orange":30,"mango":15,"avocado":40,"banana":10}
+  }
+  getTotalCost() {
+    
+     var price = this.fruitsPriceList[this.fruit]*this.quantity;
+    return this.quantity + " " + this.fruit + " " +"for KES " + price;
+
+    
+  }
+}
+
+const kioskCalc1 = new KioskCalc("orange" , 2);
+const kioskCalc2 = new KioskCalc("mango" , 3);
+const kioskCalc3 = new KioskCalc("avocado" , 4);
+const kioskCalc4 = new KioskCalc("banana" , 3);
+
+console.log(kioskCalc1.getTotalCost());
+console.log(kioskCalc2.getTotalCost());
+console.log(kioskCalc3.getTotalCost());
+console.log(kioskCalc4.getTotalCost());
+
+"2 orange for KES 60"
+"3 mango for KES 45"
+"4 avocado for KES 160"
+"3 banana for KES 30"

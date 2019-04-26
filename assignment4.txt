@@ -1,0 +1,33 @@
+
+fruits = {"oranges":30,"melons":30,"mangoes":50,"guavas":40,"kiwi":15}
+
+{oranges: 30, melons: 30, mangoes: 50, guavas: 40, kiwi: 15}
+
+
+var quantity = 2
+
+undefined
+
+
+var price = fruits["oranges"]*quantity
+
+undefined
+
+price
+60
+
+
+function calculateFruitCost (specify,qty) {
+
+fruits = {"oranges":30,"melons":30,"mangoes":50,"guavas":40,"kiwi":15};
+
+	console.log(quantity + " " + "for Ksh" + price);}
+
+undefined
+
+
+calculateFruitCost("oranges",2)
+2 for Ksh60
+
+undefined
+

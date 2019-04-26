@@ -1,0 +1,10 @@
+DIFFERENCES BETWEEN UNDEFINED AND NULL IN CONNECTION TO ES.
+-Null is an object with a valid value, has no properties and is non-mutable while undefined is assigned a variable type to an object in the following cases:
+oAn object has been declared but not defined.
+oAn object property that has not existed.
+oA function that has not been supplied.
+oReturn value of functions that have to but don’t return a value.
+
+-Null use a “typeof” operator and gives output as “object” whereas the “typeof” used in undefined gives the object as “undefined”.
+
+-An arithmetic conversion done on “null” gives the value determined as 0 while undefined doesn’t carry out an arithmetic conversion: if “undefined is added to a numeral, one gets NaN (Not a Number).

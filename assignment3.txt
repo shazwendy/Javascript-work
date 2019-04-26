@@ -1,0 +1,28 @@
+fruit_list = ["oranges", "mangoes", "bananas","kiwi", "berries","pineapples","guavas","passion"];
+
+
+function printFruits(fruit_list)
+{
+console.log(fruit_list);
+}
+
+
+(8) ["oranges", "mangoes", "bananas", "kiwi", "berries", "pineapples", "guavas", "passion"]
+
+
+
+var fruit_index = prompt("from fruit_list pick 2");
+
+
+console.log(fruit_list[fruit_index]);
+
+
+function pickFruit(fruit_list, fruit_index)
+
+
+{alert(fruit_list[fruit_index]);}
+
+
+VM564:2 bananas
+
+undefined

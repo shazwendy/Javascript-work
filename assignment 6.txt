@@ -1,0 +1,22 @@
+class Kiosk {
+constructor(fruits){
+this.fruits = fruits || [];
+}
+addFruit(fruit) {
+this.fruits.push(fruit);
+}
+
+setFruit(fruit) {
+    this.addFruit(fruit);
+}
+
+getFruits() {
+    return this.fruits;
+}
+}
+
+var kiosk = new Kiosk(['pineapples','oranges','avocadoes']);
+kiosk.setFruit("bananas")
+console.log(kiosk.getFruits());
+
+["pineapples", "orange", "avocadoes", "bananas"]

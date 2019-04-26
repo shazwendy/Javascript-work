@@ -1,0 +1,34 @@
+EXPLANATION OF DECLARATION, INITIALIZATION AND DEFINITION IN JS.
+DECLARATION.
+•It means creating a variable in JS.
+•One declares a JS variable with the var keyword.
+•After the declaration of a variable, the variable does not have a value since it has the value of undefined.
+•One can also declare a function where the function will be a function object.
+•The function declared will have all the properties, methods and behaviors of the function objects where they also return undefined.
+•Important thing to note is that a variable should not be declared twice.
+•An example:
+Var = “book”
+
+DEFINITION.
+•Is mostly used in functions.
+•A function can be defined based on a condition.
+•A function definition consists of the function keyword followed by :
+	o Name of the function.
+	o A list of parameters to the function enclosed in brackets and separated by commas.
+	o JS statements that define the functions are enclosed in the curly brackets. {}
+•An example:
+var x = 0;
+if (x === 0) {
+x = 10;
+function boo() {}
+•It gives a result
+f boo()
+INITIALIZATION.
+•It is the assigning of an initial value to a variable.
+•A variable is initialized by the use of the var keyword.
+•Object initializer is an expression that describes the initialization of an object.
+•Variable declaration can be done at the time of variable creation or a later point when the variable is needed. 
+•An example:
+var q = 6;
+q += 10;
+q = 16
