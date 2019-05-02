@@ -1,96 +1,30 @@
+function Kiosk () {
 
-function getGrade(marks){
+  var fruits = [];
 
-var marks;
+  function setFruit (fruit) {
+    fruits.push(fruit);
+  }
 
-switch(true){
+  function getFruits () {
+    return fruits;
+  }
 
-    case (marks <= 100 && marks >= 80):
+  var publicAPI = {
+    setFruit :setFruit,
+    getFruits :getFruits
+  }
 
-return grade = "A";
-
-break;
-
-    case (marks <= 79 && marks >= 70):
-
-return grade = "B";
-
-break;
-
-    case (marks <= 69 && marks >= 60):
-
-return grade = "C";
-
-break;
-
-    case (marks <= 59 && marks >= 50):
-
-return grade = "D";
-
-break;
-
-    case (marks <= 40 && marks >= 0):
-
-return grade = "E";
-
-break;
-
-    default:
-return "F";
-
+  return publicAPI;
+  
 }
 
-return grade;
+var kiosk = Kiosk();
+kiosk.setFruit("mango");
+kiosk.setFruit("apple");
+kiosk.setFruit("pear");
+kiosk.setFruit("banana")
+kiosk.setFruit("kiwi")
+console.log(kiosk.getFruits());
 
-}
-
-
-undefined
-
-getGrade(85);
-
-"A"
-
-getGrade(90);
-
-"A"
-
-getGrade(75);
-
-"B"
-
-getGrade(79);
-
-"B"
-
-getGrade(64);
-
-"C"
-
-getGrade(66);
-
-"C"
-
-getGrade(54);
-
-"D"
-
-getGrade(58);
-
-"D"
-
-getGrade(0);
-
-"E"
-
-getGrade(48);
-
-"F"
-
-getGrade(45);
-
-"F"
-
-getGrade(38);
-
-"E"
+["mango", "apple", "pear", "banana", "kiwi"]
