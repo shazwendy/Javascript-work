@@ -1,0 +1,155 @@
+class Mkulima {
+  
+  constructor() {
+    this.farms = [];
+    this.vendors = [];
+    this.products = [];
+    this.orders = [];
+  }
+  addFarm(farmId,name,farmer,phone,address){
+    let farm = {
+      id:farmId,
+      name:name,
+      farmer:farmer,
+      phone:phone,
+      address:address,
+    }
+    this.farms.push(farm)
+  }
+  removeFarm(farmId){
+    let farm = this.getFarm(farmId)
+    let index = this.farms.indexOf(farm)
+    this.farms.splice(index,1)
+  }
+  updateFarm(farmId,name,farmer,phone,address){
+    let farm = this.getFarm(farmId)
+    let myIndex = this.farms.indexOf(farm)
+   this.farms[myIndex] = {farmId:farmId, name:name, farmer:farmer, phone:phone, address:address}
+   this.farms.push(farm)
+  }
+  getFarm(farmId){
+    for (var i = 0; i < this.farms.length; i++){
+      let farm = this.farms[i]
+      if(farm.id == farmId){
+        return farm
+      }
+    }
+  }
+  addVendor(vendorId,name,phone){
+    let vendor = {
+      id:vendorId,
+      name:name,
+      phone:phone
+    }
+    this.vendors.push(vendor)
+  }
+  removeVendor(vendorId){
+    let vendor = this.getVendor(vendorId)
+    let index = this.vendors.indexOf(vendor)
+    this.vendors.splice(index, 1)
+  }
+  updateVendor(vendorId,name,phone){
+    let vendor = this.getVendor(vendorId);
+    let myIndex = this.vendors.indexOf(vendor);
+    this.vendors[myIndex] = {vendorId:vendorId, name:name, phone:phone}
+    this.vendors.push(vendor)
+  }
+  getVendor(vendorId){
+      for (var i =0; i < this.vendors.length; i++){ 
+       let vendor = this.vendors[i]
+       if(vendor.id == vendorId) {
+         return vendor
+      }
+    } 
+  }
+  addProduct(productId,name,price){
+    let product = {
+      productId:productId, 
+      name:name, 
+      price:price
+    }
+    this.products.push(product);
+  }
+  removeProduct(productId){
+    let product = this.getProduct(productId)
+    let index = this.products.indexOf(product)
+    this.products.splice(index, 1)
+  }
+  updateProduct(productId,name,price){
+    let product = this.getProduct(productId);
+    let myIndex = this.products.indexOf(product);
+    this.products[myIndex] = {productId:productId, name:name, price:price}
+    this.products.push(product)
+  }
+  getProduct(productId){
+        for (var i =0; i < this.products.length; i++){ 
+       let product = this.products[i]
+       if(product.productid == productId) {
+         return product
+      }
+    } 
+  }
+//   printProducts(){
+//     return this.product + this.prices
+//   }
+  calculateOrderCost(productId,quantity){
+    for(var i = 0; i <this.orders.length; i++){
+      let order = this.orders [i];
+      if(order.productId == productId){
+        return order
+    }
+   }
+  }
+  createOrder(productId,quantity,farmId,storeId){
+    let order = {
+      productId:productId,
+      quantity:quantiy,
+      farmId:farmId,
+      storeId:storeId
+    }
+    this.order.push(order)
+  }
+ }
+   
+  var mkulima = new Mkulima()
+  mkulima.addFarm(1, "Shazy", "Sharon", 0725747456, "Seme")
+  mkulima.addFarm(3, "Runda", "June", 0706824567, "Kitengela")
+  console.log(mkulima.farms)
+  
+//   mkulima.removeFarm(1)
+//   console.log(mkulima.farms)
+  
+//   mkulima.updateFarm(1,"Doro", "Frank",  0706827556, "Busia")
+//   console.log(mkulima.farms)
+  
+  mkulima.getFarm(1)
+  console.log(mkulima.farm)
+  
+  mkulima.addVendor(455, "Anita", 0712345678)
+  mkulima.addVendor(985, "Wendy", 0787569043)
+  console.log(mkulima.vendors)
+  
+//   mkulima.removeVendor(1)
+//   console.log(mkulima.vendor)
+  
+//   mkulima.updateVendor(675, "Iptisam", 0713456748)
+//   console.log(mkulima.vendors)
+  
+//   mkulima.getVendor(455)
+//   console.log(mkulima.vendor)
+  
+//   mkulima.addProduct(90, "Mueni", 567)
+//   console.log(mkulima.product)
+  
+//   mkulima.removeProduct(90)
+//   console.log(mkulima.products)
+  
+//   mkulima.updateProduct(90, "Peeps", 456)
+//   mkulima.updateProduct(78, "Sugar", 3457)
+//   console.log(mkulima.products)
+  
+//   mkulima.getProduct(90)
+//   console.log(mkulima.product)
+  
+//   mkulima.createOrder(879, 5kg, 0001, 00)
+//   console.log(mkulima.order)
