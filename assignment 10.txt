@@ -13,7 +13,7 @@ HTML;
     <li>Bananas</li>
     <li>Water Melons</li>
   </ul>
-  <h3>Vegetables</h3>
+  <h3 id = "shaz2">Vegetables</h3>
   <ul id="vegList">
     <li>Onions</li>
     <li>Tomatoes</li>
@@ -32,7 +32,10 @@ var h1 = document.getElementById("title")
 h1.style.color="green"
 
 var h3 = document.getElementById("shaz")
-h3.innerHTML = h3.innerHTML.toUpperCase();
+h3.style.textTransform = "uppercase";
+
+var h3 = document.getElementById("shaz2")
+h3.style.textTransform = "uppercase";
 
 var fruit = document.createElement("li")
 fruit.innerHTML = "Kiwi"
