@@ -1,0 +1,102 @@
+HTML....
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Greens Kiosk</title>
+</head>
+<body>
+  <h1 id="title">Welcome to Greens Kiosk</h1>
+  <p>We sell fruits and vegetables</p>
+  
+  <h3>Fruits</h3>
+   <input id="addfruit" type="text" size="20"/> 
+<button class="friut" id="btnAddfruit" value="Addfruit" onclick="addFruit()" >SubmitFruit</button> 
+
+ <div class="frtList">
+  <ul id="fruList">
+    <li>Mangoes</li>
+    <li>Bananas</li>
+    <li>Water Melons</li>
+  </ul>
+   
+  </div>
+  
+  
+<h3>Vegetables</h3>
+<input id="addvegs" type="text" size="20"/>
+    <button class="veges" id="Addveg" value="Add" onclick="addVeg()" >Vegetables</button> 
+  <div class="vegList"
+    <ul id="vegList">
+    <li>Onions</li>
+    <li>Tomatoes</li>
+    <li>Kales</li>
+  </ul>
+  
+<script>
+
+</script>
+  <input id="myInput" placeholdertext= "add vegetable...">
+  
+</body>
+</html>
+
+
+JAVASCRIPT...
+
+var colorChange =()=>{
+  var title = document.getElementById("title");
+  title.style.color= title.style.color=="green"? "silver":"green"
+
+};
+setInterval(colorChange,1000);
+
+var collapse = document.getElementsByClassName("friut");var i;
+for (i = 0; i < collapse.length; i++) {
+ collapse[i].addEventListener("click", function() {
+   this.classList.toggle("active");
+   var fruitList = this.nextElementSibling;
+   if (fruitList.style.display === "block") {
+     fruitList.style.display = "none";
+   } else {
+     fruitList.style.display = "block";
+   }
+ });
+}
+
+var collapseTwo = document.getElementsByClassName("veges");var i;
+for (i = 0; i < collapseTwo.length; i++) {
+ collapseTwo[i].addEventListener("click", function() {
+   this.classList.toggle("active");
+   var vegList = this.nextElementSibling;
+   if (vegList.style.display === "block") {
+     vegList.style.display = "none";
+   } else {
+     vegList.style.display = "block";
+   }
+ });
+}
+
+function addFruit(){
+      var li = document.createElement("LI");  
+      var input = document.getElementById("addfruit");
+        li.innerHTML = input.value;
+        input.value = " ";
+
+        document.getElementById("fruList").appendChild(li);
+
+}
+
+myInput.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+    var input = document.getElementById("myInput");
+    var inputvalue = input.value
+    var ul = document.getElementById("vegList")
+    var li = document.createElement ("li");
+    var text = document.createTextNode (inputvalue)
+    li.appendChild(text)
+    ul.appendChild(li)
+
+  }
+});
