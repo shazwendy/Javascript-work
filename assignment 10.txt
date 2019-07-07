@@ -31,11 +31,17 @@ body.style.backgroundColor="silver"
 var h1 = document.getElementById("title")
 h1.style.color="green"
 
-var h3 = document.getElementById("shaz")
-h3.style.textTransform = "uppercase";
+var h3s = document.getElementsByTagName("h3")
+var fruitH3 = h3s[0]
+fruitH3.style.textTransform = "uppercase"
 
-var h3 = document.getElementById("shaz2")
-h3.style.textTransform = "uppercase";
+var vegH3 = h3s[1]
+vegH3.style.textTransform = "uppercase"
+
+var fruitList  = document.getElementById('fruList')
+var newFruit = document.createElement('li')
+newFruit.innerHTML = 'Apples'
+fruitList.appendChild(newFruit)
 
 var fruit = document.createElement("li")
 fruit.innerHTML = "Kiwi"
